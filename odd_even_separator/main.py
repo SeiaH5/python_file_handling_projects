@@ -10,22 +10,16 @@ class even_odd_identifier:
         print("\n\033[31mnumbers.txt not found.\033[0m")
         print("Plaese enter integers to create the file.")
 
-        numbers = []
-
-        while True:
-            try:
-                num = int(input("Press a non-numerical character to stop.\nEnter a number:"))
-                numbers.append(num)
-            except ValueError:
-                break
-
-        numbers.sort()
-
         with open(self.file_path + "numbers.txt", "w") as file:
-            for num in numbers:
-                file.write(str(num) + "\n")
+            while True:
+                try:
+                    num = int(input("Press a non-numerical character to stop.\nEnter a number:"))
+                    file.write(str(num) + "\n")
+                        
+                except ValueError:
+                    break
 
-        print("\nnumbers.txt created successfully (sorted).\n")
+        print("\n\033[32mnumbers.txt created successfully.\033[0m\n")
 
     def numbers_separator(self):
         if not os.path.exists(self.file_path + "numbers.txt"):
