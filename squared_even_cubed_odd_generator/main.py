@@ -11,7 +11,7 @@ class even_odd_multiplier:
             numbers = file.readlines()
 
         double_even_file = open(self.file_path + "double.txt", "w")
-        triple_odd_file = open(self.file_path + "odd.txt", "w")
+        triple_odd_file = open(self.file_path + "triple.txt", "w")
 
         for num in numbers:
             n = int(num.strip())
