@@ -1,6 +1,6 @@
 import os
 
-class even_odd_identifier:
+class even_odd_separator:
     def __init__(self):
         self.file_path = os.path.join(os.path.dirname(__file__), "")
         self.even = []
@@ -10,18 +10,24 @@ class even_odd_identifier:
         print("\n\033[31mnumbers.txt not found.\033[0m")
         print("Plaese enter integers to create the file.")
 
+        numbers = []
+
+        while True:
+            try:
+                num = int(input("Press a non-numerical character to stop.\nEnter a number:"))
+                numbers.append(num)
+            except ValueError:
+                break
+
+        numbers.sort()
+
         with open(self.file_path + "numbers.txt", "w") as file:
-            while True:
-                try:
-                    num = int(input("Press a non-numerical character to stop.\nEnter a number:"))
-                    file.write(str(num) + "\n")
-                        
-                except ValueError:
-                    break
+            for num in numbers:
+                file.write(str(num) + "\n")
 
-        print("\n\033[32mnumbers.txt created successfully.\033[0m\n")
+        print("\nnumbers.txt created successfully (sorted).\n")
 
-    def numbers_separator(self):
+    def numbers_identifier_separator(self):
         if not os.path.exists(self.file_path + "numbers.txt"):
             self.create_numbers_file()
 
@@ -51,4 +57,4 @@ class even_odd_identifier:
 
         print("\n\033[32mFiles created successfully.\033[0m")
 
-even_odd_identifier().numbers_separator()
+even_odd_separator().numbers_identifier_separator()
