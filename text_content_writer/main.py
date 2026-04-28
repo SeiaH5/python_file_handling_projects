@@ -6,14 +6,24 @@ class text_writer:
 
     def write_text(self):
         file_name = os.path.join(self.file_path, "mylife.txt")
+        print("\n\033[1mMY LIFE TEXT\033[0m")
 
         with open(file_name, "w") as file:
             while True:
-                line = input("Enter line: ")
+                line = input("\nEnter line: ")
                 file.write(line + "\n")
                 
-                more_input = input("Are there more lines y/n? ").strip().lower()
-                if more_input != "y":
-                    break
+                while True:
+                    more_input = input("Are there more lines y/n? ").strip().lower()
+                    if more_input in ["y", "n"]:
+                        break
+                    else:
+                        print("\n\033[31mY or N only. Try again\033[0m\n")
+                        continue
+                
+                if more_input == "n":
+                        print("\n\033[1m---END---\033[0m")
+                        break
+        
 
 text_writer().write_text()
