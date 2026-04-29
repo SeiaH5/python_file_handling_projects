@@ -1,7 +1,7 @@
 import os
 import json
 
-class student_record:
+class StudentRecord:
     def __init__(self):
         self.file_path = os.path.dirname(__file__)
 

@@ -1,6 +1,6 @@
 import os
 
-class text_writer:
+class TextWriter:
     def __init__(self):
         self.file_path = os.path.join(os.path.dirname(__file__), "")
 

@@ -1,6 +1,6 @@
 import os
 
-class even_odd_separator:
+class EvenOddSeparator:
     def __init__(self):
         self.file_path = os.path.join(os.path.dirname(__file__), "")
         self.even = []

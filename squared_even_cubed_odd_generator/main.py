@@ -1,6 +1,6 @@
-from multiplier import even_odd_multiplier
+from multiplier import EvenOddMultiplier
 
 try:
-    even_odd_multiplier().integers_identifier()
+    EvenOddMultiplier().integers_identifier()
 except FileNotFoundError:
     print("\nThere are no files found.\n")

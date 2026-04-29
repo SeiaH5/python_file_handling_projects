@@ -1,3 +1,3 @@
-from separator import even_odd_separator
+from separator import EvenOddSeparator
 
-even_odd_separator().numbers_identifier_separator()
+EvenOddSeparator().numbers_identifier_separator()

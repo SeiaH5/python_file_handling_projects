@@ -1,6 +1,6 @@
 import os
 
-class even_odd_multiplier:
+class EvenOddMultiplier:
     def __init__(self):
         self.file_path = os.path.join(os.path.dirname(__file__), "")
         self.double_even = []

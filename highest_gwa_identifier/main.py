@@ -1,3 +1,3 @@
-from student import student_record
+from student import StudentRecord
 
-student_record().highest_gwa()
+StudentRecord().highest_gwa()

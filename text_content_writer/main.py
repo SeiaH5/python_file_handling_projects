@@ -1,3 +1,3 @@
-from writer import text_writer 
+from writer import TextWriter
 
-text_writer().write_text()
+TextWriter().write_text()
